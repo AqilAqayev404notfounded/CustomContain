@@ -5,13 +5,13 @@ public static class CustomContain
     
     public static bool Contain(this string a, string b)
     {
+        a = a.ToLower();
+        b = b.ToLower();
         if (a == null || b == null)
         {
             return false;
         }
 
-        a = a.ToLower();
-        b = b.ToLower();
 
         
         for (int i = 0; i <= a.Length - b.Length; i++)
